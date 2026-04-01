@@ -1,14 +1,19 @@
 fun main() {
-    val numeros = IntArray(6)
 
-    println("Digite 6 números um de cada vez:")
+    val numeros = IntArray(4)
 
-    for (i in 1..6) {
-        print("valor $i: ")
+    println("Digite 4 números um de cada vez:")
+
+    for (i in 1..4) {
+        println("número $i: ")
         numeros[i - 1] = readln().toInt()
     }
 
-    val soma = numeros.filter { it < 72 }.sum()
-    println("Números informados foram: ${numeros.joinToString(", ")}")
-    println("A soma dos números menores que 72 é: $soma")
+    val primeiro = numeros[0]
+    val ultimo = numeros[3]
+    val maior = numeros.max()
+
+    println("Primeiro:$primeiro")
+    println("Último:$ultimo")
+    println("Maior:$maior")
 }
